@@ -1,0 +1,1 @@
+select distinct * from {{mockable_source('restau', 'orders', 'sample_orders')}}
