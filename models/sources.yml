@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: restau
+    schema: SOURCE  
+    tables: 
+      - name: restaurants
+      - name: dishes
+      - name: fuzzy_orders
+      - name : orders
+        description: "all orders"
+        columns:
+              - name: amount
+                description: "cash of the order"
+                tests:
+                  - not_null
+
+              - name: identifier
+                description: id
+                tests:
+                  - unique :
+                      config:
+                        severity: warn
+                  - not_null

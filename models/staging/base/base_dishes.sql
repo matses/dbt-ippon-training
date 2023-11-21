@@ -1,0 +1,1 @@
+select * from {{source('restau', 'dishes')}}
